@@ -20,10 +20,9 @@ body {
   line-height: 1.6;
 }
 
-/* --- ساختار layout پایه (حالت موبایل) --- */
 .layout-container {
   display: flex;
-  flex-direction: column; /* در موبایل سایدبار بالا و محتوا پایین می‌افتد */
+  flex-direction: column;
 }
 
 .sidebar {
@@ -87,24 +86,21 @@ body {
   font-weight: bold;
 }
 
-/* --- Responsive (طراحی برای تبلت و دسکتاپ) --- */
-
-/* Breakpoint 1: تبلت و لپ‌تاپ (Desktop Layout) */
 @media (min-width: 768px) {
   .layout-container {
-    flex-direction: row; /* در دسکتاپ سایدبار سمت راست/چپ قرار می‌گیرد */
+    flex-direction: row;
     min-height: 100vh;
   }
 
   .sidebar {
     width: 280px;
-    position: fixed; /* سایدبار ثابت می‌ماند */
+    position: fixed;
     height: 100vh;
     overflow-y: auto;
   }
 
   .main-content {
-    margin-right: 280px; /* ایجاد فاصله به اندازه عرض سایدبار (برای زبان‌های RTL) */
+    margin-right: 280px;
     flex: 1;
     padding: 2.5rem;
   }
@@ -115,4 +111,32 @@ body {
     gap: 1.5rem;
   }
 }
+.layout-container {
+  display: flex;
+  flex-direction: column;
+}
 
+.sidebar {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .layout-container {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 280px;
+    position: fixed;
+    height: 100vh;
+  }
+
+  .main-content {
+    margin-right: 280px;
+    flex: 1;
+    padding: 2.5rem;
+  }
+}

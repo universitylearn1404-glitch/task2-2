@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رزومه و پورتفولیو | نام شما</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- اضافه کردن آیکون‌ها (مثل FontAwesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="layout-container">
+    
+    <!-- 1. Sidebar (سایدبار) -->
+    <aside class="sidebar">
+      <div class="profile-info">
+        <img src="assets/profile.jpg" alt="عکس پرتره" class="profile-img">
+        <h2>نام و نام خانوادگی</h2>
+        <p class="job-title">توسعه‌دهنده وب (Frontend Developer)</p>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#about"><i class="fas fa-user"></i> درباره من</a></li>
+          <li><a href="#skills"><i class="fas fa-code"></i> مهارت‌ها</a></li>
+          <li><a href="#experience"><i class="fas fa-briefcase"></i> سوابق شغلی</a></li>
+          <li><a href="#projects"><i class="fas fa-project-diagram"></i> پروژه‌ها</a></li>
+          <li><a href="#education"><i class="fas fa-graduation-cap"></i> تحصیلات</a></li>
+          <li><a href="#contact"><i class="fas fa-envelope"></i> تماس با من</a></li>
+        </ul>
+      </nav>
+
+      <div class="contact-links">
+        <a href="mailto:email@example.com"><i class="fas fa-envelope"></i> ایمیل</a>
+        <a href="https://github.com/username" target="_blank"><i class="fab fa-github"></i> گیت‌هاب</a>
+        <a href="https://linkedin.com/in/username" target="_blank"><i class="fab fa-linkedin"></i> لینکدین</a>
+      </div>
+    </aside>
+
+    <!-- 2. Main Content (محتوای اصلی) -->
+    <main class="main-content">
+
+      <!-- About Me -->
+      <section id="about" class="card">
+        <h2><i class="fas fa-user"></i> درباره من</h2>
+        <p>توضیح کوتاهی درباره خودتان، علایق شما در برنامه‌نویسی و اهداف حرفه‌ای‌تان...</p>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="card">
+        <h2><i class="fas fa-code"></i> مهارت‌ها</h2>
+        <div class="skills-grid">
+          <span class="badge">HTML5</span>
+          <span class="badge">CSS3</span>
+          <span class="badge">Flexbox / CSS Grid</span>
+          <span class="badge">Git & GitHub</span>
+          <span class="badge">Responsive Design</span>
+        </div>
+      </section>
+
+      <!-- Experience & Education -->
+      <section id="experience" class="card">
+        <h2><i class="fas fa-briefcase"></i> سوابق کاری</h2>
+        <div class="timeline-item">
+          <h3>توسعه‌دهنده فرانت‌اند جونیور</h3>
+          <span>۱۴۰۲ - تا کنون</span>
+          <p>توضیح کارهای انجام‌شده و مسئولیت‌ها...</p>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="card">
+        <h2><i class="fas fa-project-diagram"></i> پروژه‌ها</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img src="assets/project1.jpg" alt="پروژه اول">
+            <h3>وب‌سایت شخصی (Portfolio)</h3>
+            <p>پروژه طراحی رزومه آنلاین کاملاً رسپانسیو با HTML و CSS.</p>
+            <a href="#" class="btn">مشاهده کدها</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="card">
+        <h2><i class="fas fa-envelope"></i> ارتباط با من</h2>
+        <form class="contact-form">
+          <input type="text" placeholder="نام شما" required>
+          <input type="email" placeholder="ایمیل شما" required>
+          <textarea placeholder="پیام شما..." rows="4" required></textarea>
+          <button type="submit" class="btn-submit">ارسال پیام</button>
+        </form>
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
+

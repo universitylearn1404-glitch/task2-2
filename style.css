@@ -1,0 +1,118 @@
+:root {
+  --primary-color: #2563eb;
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-color: #1e293b;
+  --sidebar-bg: #0f172a;
+  --sidebar-text: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Vazirmatn', system-ui, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* --- ساختار layout پایه (حالت موبایل) --- */
+.layout-container {
+  display: flex;
+  flex-direction: column; /* در موبایل سایدبار بالا و محتوا پایین می‌افتد */
+}
+
+.sidebar {
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: 2rem;
+  text-align: center;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.nav-menu ul {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.nav-menu a {
+  color: var(--sidebar-text);
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: var(--primary-color);
+}
+
+.main-content {
+  padding: 1.5rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.badge {
+  background-color: #e0e7ff;
+  color: var(--primary-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* --- Responsive (طراحی برای تبلت و دسکتاپ) --- */
+
+/* Breakpoint 1: تبلت و لپ‌تاپ (Desktop Layout) */
+@media (min-width: 768px) {
+  .layout-container {
+    flex-direction: row; /* در دسکتاپ سایدبار سمت راست/چپ قرار می‌گیرد */
+    min-height: 100vh;
+  }
+
+  .sidebar {
+    width: 280px;
+    position: fixed; /* سایدبار ثابت می‌ماند */
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .main-content {
+    margin-right: 280px; /* ایجاد فاصله به اندازه عرض سایدبار (برای زبان‌های RTL) */
+    flex: 1;
+    padding: 2.5rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
